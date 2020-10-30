@@ -1,8 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
-
+<ScrollPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MainViewController">
+   <content>
+      <VBox prefHeight="397.0" prefWidth="597.0" style="-fx-padding: 5%;" stylesheets="@../application/application.css">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="operacional">
+                  <items>
+                    <MenuItem fx:id="menuItemAluno" mnemonicParsing="false" onAction="#onMenuItemAlunoAction" text="Alunos" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem fx:id="menuItemVer" mnemonicParsing="false" onAction="#onMenuItemVerAction" text="Ver" />
+                        <MenuItem fx:id="menuItemAtualizar" mnemonicParsing="false" onAction="#onMenuItemAtualizarAction" text="Atualizar" />
+                        <MenuItem fx:id="menuItemDeletar" mnemonicParsing="false" onAction="#onMenuItemDeletarAction" text="Deletar" />
+                        <MenuItem fx:id="menuItemCriar" mnemonicParsing="false" onAction="#onMenuItemCriarAction" text="Criar" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </content>
+</ScrollPane>
